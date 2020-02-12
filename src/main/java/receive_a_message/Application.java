@@ -1,4 +1,4 @@
-package main.java.send_a_message;
+package main.java.receive_a_message;
 
 import java.util.Arrays;
 

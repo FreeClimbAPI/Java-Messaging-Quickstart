@@ -14,8 +14,8 @@ To get started using a FreeClimb account, follow the instructions [here](https:/
 
    | ENV VARIABLE            | DESCRIPTION                                                                                                                                                                        |
    | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | ACCOUNT_ID   | Account ID which can be found under [API Keys](https://www.freeclimb.com/dashboard/portal/account/authentication) in Dashboard           |
-   | AUTH_TOKEN   | Authentication Token which can be found under [API Keys](https://www.freeclimb.com/dashboard/portal/account/authentication) in Dashboard |
+   | ACCOUNT_ID   | Account ID which can be found under [API credentials](https://www.freeclimb.com/dashboard/portal/account/authentication) in Dashboard           |
+   | API_KEY   | API key which can be found under [API credentials](https://www.freeclimb.com/dashboard/portal/account/authentication) in Dashboard |
    | FREECLIMB_PHONE_NUMBER | The FreeClimb number that is being used to make a phone call. To learn more go [here](https://docs.freeclimb.com/docs/getting-started-with-freeclimb#section-2-get-a-phone-number) |
    | TO_PHONE_NUMBER         | The phone number which is being called. [Must be a verified phone number](https://docs.freeclimb.com/docs/using-your-trial-account#section-verifying-outbound-numbers) (for trial users) and in E.164 format.             |
 

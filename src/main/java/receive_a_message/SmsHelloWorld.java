@@ -25,10 +25,14 @@ public class SmsHelloWorld {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
       
+    // defaultClient.setAccountId("MY_ACCOUNT_ID");
+    // defaultClient.setApiKey("MY_API_KEY");
     // Configure HTTP basic authorization: fc
     HttpBasicAuth fc = (HttpBasicAuth) defaultClient.getAuthentication("fc");
-    fc.setUsername(System.getenv("ACCOUNT_ID"));
-    fc.setPassword(System.getenv("API_KEY"));
+    fc.setUsername("");
+    fc.setPassword("");
+    System.out.println(fc.getUsername());
+    System.out.println(fc.getPassword());
 
     DefaultApi apiInstance = new DefaultApi(defaultClient);
       

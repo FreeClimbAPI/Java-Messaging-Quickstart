@@ -18,27 +18,22 @@ public class SmsHelloWorld {
 
   @RequestMapping(value = { "/incomingSms" }, method = RequestMethod.POST)
   public void inboundSms(@RequestBody String body) {
+    String accountId = System.getenv("ACCOUNT_ID");
+    String apiKey = System.getenv("API_KEY");
     String fromNumber = System.getenv("FREECLIMB_PHONE_NUMBER");
     String toNumber = System.getenv("TO_PHONE_NUMBER");
     String message = "Hello World!";
-  
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
-      
-    // defaultClient.setAccountId("MY_ACCOUNT_ID");
-    // defaultClient.setApiKey("MY_API_KEY");
-    // Configure HTTP basic authorization: fc
-    HttpBasicAuth fc = (HttpBasicAuth) defaultClient.getAuthentication("fc");
-    fc.setUsername("");
-    fc.setPassword("");
-    System.out.println(fc.getUsername());
-    System.out.println(fc.getPassword());
+    defaultClient.setAccountId(accountId);
+    defaultClient.setApiKey(apiKey);
 
     DefaultApi apiInstance = new DefaultApi(defaultClient);
       
     MessageRequest messageRequest = new MessageRequest(); // MessageRequest | Details to create a message
     messageRequest.setFrom(fromNumber);
-    messageRequest.setTo(fromNumber);
+    messageRequest.setTo(toNumber);
     messageRequest.setText(message);
     try {
       apiInstance.sendAnSmsMessage(messageRequest);

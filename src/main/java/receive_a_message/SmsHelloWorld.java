@@ -68,7 +68,7 @@ public class SmsHelloWorld {
     String fromNumber = dotenv.get("FREECLIMB_NUMBER");
     String toNumber = request.from;
     String apiServer = System.getenv("API_SERVER") != null ? System.getenv("API_SERVER") : "https://www.freeclimb.com/apiserver";
-    String message = "Hello World!";
+    String message = "Hello, World!";
 
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath(apiServer);

@@ -9,7 +9,7 @@ Specifically, the project will:
 
 ## Tutorial
 
-We offer a [Java SMS Quickstart Tutorial](https://docs.freeclimb.com/docs/java-messaging-quickstart) for more detailed set-up instructions and explanation of how FreeClimb works.
+We offer a [Java Messaging Quickstart Tutorial](https://docs.freeclimb.com/docs/java-messaging-quickstart) for more detailed set-up instructions and explanation of how FreeClimb works.
 
 ## Requirements
 A [FreeClimb account](https://www.freeclimb.com/dashboard/signup/)

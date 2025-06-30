@@ -62,6 +62,16 @@ public class SmsHelloWorld {
 
   @RequestMapping(value = { "/incomingSms" }, method = RequestMethod.POST)
   public void inboundSms(@RequestBody IncomingSmsRequest request) {
+    System.out.println("Received request: " + request);
+    System.out.println("  From: " + request.from);
+    System.out.println("  To: " + request.to);
+    System.out.println("  Account ID: " + request.accountId);
+    System.out.println("  Application ID: " + request.applicationId);
+    System.out.println("  Message ID: " + request.messageId);
+    System.out.println("  Direction: " + request.direction);
+    System.out.println("  Status: " + request.status);
+    System.out.println("  Text: " + request.text);
+
     Dotenv dotenv = Dotenv.configure().ignoreIfMissing().load();
     String accountId = dotenv.get("ACCOUNT_ID");
     String apiKey = dotenv.get("API_KEY");
